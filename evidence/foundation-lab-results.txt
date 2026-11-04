@@ -1,0 +1,28 @@
+IT Infrastructure Lab - Linux foundation tests
+Run date (UTC): 2026-11-04 14:32
+
+[1] Linux identity and permissions
+User: viktoriatsi | Group: viktoriatsi
+PASS: owner can read file with mode 600
+PASS: access denied with mode 000
+Restored permissions: 600
+
+[2] Configuration backup and restore
+PASS: backup restored successfully
+
+[3] Networking checks
+Network interface names:
+eth0
+lo
+PASS: DNS resolution works
+PASS: HTTPS response HTTP 200
+
+[4] System monitoring
+Uptime: up 2 hours, 38 minutes
+               total        used        free      shared  buff/cache   available
+Mem:           6.7Gi       534Mi       6.0Gi       4.2Mi       292Mi       6.2Gi
+Swap:          2.0Gi          0B       2.0Gi
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/sdd       1007G  1.6G  955G   1% /
+
+Finished. Review results before publishing.
