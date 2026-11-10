@@ -1,0 +1,12 @@
+=== Kubernetes Deployment ===
+NAME                READY   UP-TO-DATE   AVAILABLE   AGE
+yff-python-health   2/2     2            2           131m
+=== Pods ===
+NAME                                 READY   STATUS    RESTARTS   AGE
+yff-python-health-79bdbbdd9b-8qplp   1/1     Running   0          22m
+yff-python-health-79bdbbdd9b-wqd82   1/1     Running   0          22m
+=== Service ===
+NAME                TYPE        CLUSTER-IP     EXTERNAL-IP   PORT(S)   AGE
+yff-python-health   ClusterIP   10.96.115.48   <none>        80/TCP    131m
+=== Rollout ===
+deployment "yff-python-health" successfully rolled out

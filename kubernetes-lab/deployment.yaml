@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: yff-python-health
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: yff-python-health
+  template:
+    metadata:
+      labels:
+        app: yff-python-health
+    spec:
+      containers:
+        - name: python-health
+          image: yff-python-health:v1
+          imagePullPolicy: Never
+          ports:
+            - containerPort: 8000
+          readinessProbe:
+            httpGet:
+              path: /health
+              port: 8000
+            initialDelaySeconds: 3
+            periodSeconds: 5
+          livenessProbe:
+            httpGet:
+              path: /health
+              port: 8000
+            initialDelaySeconds: 10
+            periodSeconds: 10
